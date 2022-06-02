@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+body{
+    overflow: hidden;
+    background-color: #eee;
+}
+.container{
+    height: 90vh;
+    width: 70vh;
+    background-color: rgba(255, 31, 31, 0.082);
+    margin: auto;
+    position: relative;
+    top: 5vh;
+}
+.paperStack{
+    height: 80vh;
+    width: 60vh;
+    margin: auto;
+    position: relative;
+    top: 5vh;
+}
+.paper{
+    background-color: #fff;
+    height: 70vh;
+    width: 55vh;
+    position: absolute;
+    box-shadow: 10px 10px  10px -10px #777;
+}
+.paper:nth-child(1){
+    z-index: 100;
+    transform: rotate(2deg);
+    animation: NormalAnimate 1s 9s 1;
+}
+.paper h1{
+    color: chocolate;
+    font-size: 6vh;
+    text-align: center;
+    margin-top: 30vh;
+}
+.paper h1 span{
+    color: green;
+    font-size: 8vh;
+    line-height: 4vh;
+    padding: 4vh;
+    display: inline-block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.paper:nth-child(2){
+    z-index: 99;
+    transform: rotate(-2deg);
+    /* animation: NormalAnimate 1s 9s 1; */
+}
+.paper:nth-child(3){
+    z-index: 2;
+    transform: rotate(1deg);
+    animation: NormalAnimate 1s 8s 1;
+}
+.paper:nth-child(4){
+    z-index: 3;
+    transform: rotate(-1deg);
+    animation: NormalAnimate 1s 7s 1;
+}
+.paper:nth-child(5){
+    z-index: 4;
+    transform: rotate(-1.5deg);
+    animation: NormalAnimate 1s 6s 1;
+}
+.paper:nth-child(6){
+    z-index: 5;
+    transform: rotate(1.5deg);
+    animation: NormalAnimate 1s 5s 1;
+}
+.paper:nth-child(7){
+    z-index: 6;
+    transform: rotate(2.5deg);
+    animation: NormalAnimate 1s 4s 1;
+}
+.paper:nth-child(8){
+    z-index: 8;
+    transform: rotate(-2.5deg);
+    animation: NormalAnimate 1s 3s 1;
+}
+.paper:nth-child(9){
+    z-index: 9;
+    transform: rotate(5deg);
+    animation: NormalAnimate 1s 2s 1;
+}
+.paper:nth-child(10){
+    z-index: 10;
+    transform: rotate(-5deg);
+    animation: NormalAnimate 1s 1s 1;
+}
+.paper:nth-child(1):hover{
+    z-index: 98;
+    transform: rotate(2deg);
+}
+.paper:nth-child(2):hover{
+    z-index: 101;
+    transform: rotate(-2deg);
+    animation: animate 1s 1;
+}
+.paper:nth-child(2):hover ~ div.paper{
+    z-index: 11;
+    transform: rotate(0deg);
+}
+@keyframes animate {
+    0%{
+        transform: scale(2) rotate(45deg);
+    }
+    100%{
+        transform: scale(1) rotate(0deg);
+    }
+}
+@keyframes NormalAnimate {
+    0%{
+        transform: scale(2) rotate(8deg);
+        visibility: visible;
+        z-index: 105;
+    }
+    100%{
+        transform: scale(1) rotate(0deg);
+        visibility: visible;
+        z-index: 105;
+    }
+}
